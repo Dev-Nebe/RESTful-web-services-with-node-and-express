@@ -1,0 +1,42 @@
+{
+  "name": "restful-apis",
+  "version": "1.0.0",
+  "description": "Learning to quickly and simply create lightweight, fast, scalable APIs.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-Nebe/RESTful-web-services-with-node-and-express.git"
+  },
+  "author": "Dev-Nebe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dev-Nebe/RESTful-web-services-with-node-and-express/issues"
+  },
+  "homepage": "https://github.com/Dev-Nebe/RESTful-web-services-with-node-and-express#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.11",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}

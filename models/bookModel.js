@@ -7,7 +7,8 @@ const bookModel = new Schema(
     title: { type: String },
     author: { type: String },
     genre: { type: String },
-    read: { type: Boolean, default: false }
+    read: { type: Boolean, default: false },
+    bookId: { type: Number }
   }
 );
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint",
-    "start": "nodemon app.js",
+    "start": "set DEBUG=app,app:* & nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Dev-Nebe/RESTful-web-services-with-node-and-express#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "debug": "^4.1.1",
     "express": "^4.17.1",
     "mongoose": "^5.7.11",
     "nodemon": "^1.19.4"
@@ -26,7 +29,10 @@
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.2",
+    "should": "^13.2.3",
+    "sinon": "^7.5.0"
   },
   "nodemonConfig": {
     "restartable": "rs",

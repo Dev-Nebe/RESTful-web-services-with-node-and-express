@@ -2,10 +2,15 @@ const debug = require('debug')('app:booksController');
 
 const booksController = (Book) => {
   const post = (req, res) => {
+    if (!req.body.title) {
+      res.status(400);
+      return res.send('Title is required');
+    }
     const book = new Book(req.body);
     debug(book);
     book.save();
-    return res.status(201).send('Your book has been saved');
+    res.status(201);
+    return res.json(book);
   };
   const get = (req, res) => {
     debug('Get request received');
